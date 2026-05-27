@@ -35,6 +35,70 @@
       users can reply STOP to opt out, and users can reply HELP for help.
     </p>
 
+    <h2>Public Example of the SMS Opt-In Form</h2>
+
+    <p>
+      The example below shows the type of property inquiry form or assistant intake flow
+      a consumer sees before submitting a property inquiry, showing request, or callback request.
+    </p>
+
+    <form>
+      <p>
+        <label for="name">Name</label><br>
+        <input id="name" name="name" type="text" placeholder="Jane Consumer">
+      </p>
+
+      <p>
+        <label for="phone">Mobile Phone Number</label><br>
+        <input id="phone" name="phone" type="tel" placeholder="555-555-5555">
+      </p>
+
+      <p>
+        <label for="email">Email Address</label><br>
+        <input id="email" name="email" type="email" placeholder="jane@example.com">
+      </p>
+
+      <p>
+        <label for="property">Property of Interest</label><br>
+        <input id="property" name="property" type="text" placeholder="1234 Aspen Ridge Drive">
+      </p>
+
+      <p>
+        <label for="request">Request Type</label><br>
+        <select id="request" name="request">
+          <option>Property inquiry</option>
+          <option>Showing request</option>
+          <option>Callback request</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="message">Message or Request Details</label><br>
+        <textarea id="message" name="message" rows="4" placeholder="I would like more information about this property."></textarea>
+      </p>
+
+      <p>
+        <label>
+          <input type="checkbox" name="sms_consent">
+          I agree to receive transactional SMS messages from SIDNI related to my property inquiry,
+          showing request, callback request, or related follow-up. Message frequency varies.
+          Message and data rates may apply. Reply STOP to opt out. Reply HELP for help.
+          Consent is not a condition of purchasing any property, product, or service.
+          View our <a href="../privacy/">Privacy Policy</a> and
+          <a href="../terms/">Terms and Conditions</a>.
+        </label>
+      </p>
+
+      <p>
+        <button type="button">Submit Property Request Example</button>
+      </p>
+    </form>
+
+    <p>
+      This example form is provided for opt-in review purposes. In production, users must actively
+      select the SMS consent checkbox before submitting their phone number for SMS follow-up.
+    </p>
+
     <h2>Example Consent Disclosure</h2>
 
     <p>
