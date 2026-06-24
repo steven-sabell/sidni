@@ -1,220 +1,474 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
   <title>SIDNI Terms and Conditions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Terms and Conditions for SIDNI by Steven Joseph Sabell, a real estate listing inquiry assistant.">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #222;
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --border: #d1d5db;
+      --accent: #1d4ed8;
+      --accent-dark: #1e40af;
+      --notice-bg: #eff6ff;
+      --notice-border: #2563eb;
+      --warning-bg: #fff7ed;
+      --warning-border: #f97316;
     }
-    h1, h2 {
-      color: #111;
-    }
-    a {
-      color: #0645ad;
-    }
+
+```
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 0 20px 48px;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-top: 0;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+ul {
+  margin-top: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.notice {
+  background: var(--notice-bg);
+  border-left: 5px solid var(--notice-border);
+  padding: 16px;
+  border-radius: 8px;
+  margin: 18px 0;
+}
+
+.warning {
+  background: var(--warning-bg);
+  border-left: 5px solid var(--warning-border);
+  padding: 16px;
+  border-radius: 8px;
+  margin: 18px 0;
+}
+
+footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+```
+
   </style>
 </head>
+
 <body>
-  <h1>SIDNI Terms and Conditions</h1>
+  <header>
+    <div class="container">
+      <h1>SIDNI Terms and Conditions</h1>
+      <p class="muted">
+        Terms and Conditions for SIDNI by Steven Joseph Sabell.
+      </p>
 
-  <p><strong>Last Updated:</strong> 2026-05-20</p>
+```
+  <nav aria-label="Site navigation">
+    <a href="../">Home</a>
+    <a href="../sms-consent/">Property Inquiry Form and SMS Opt-In</a>
+    <a href="../privacy/">Privacy Policy</a>
+  </nav>
+</div>
+```
 
+  </header>
+
+  <main>
+    <section>
+      <h2>Agreement to These Terms</h2>
+
+```
   <p>
-    These Terms and Conditions govern your use of SIDNI, a temporary MVP brand for an
-    AI-powered real estate listing inquiry assistant.
+    These Terms and Conditions govern your use of SIDNI by Steven Joseph Sabell,
+    including the SIDNI real estate listing inquiry assistant, public property inquiry
+    form, SMS communications, and related services.
   </p>
 
   <p>
-    By contacting SIDNI, using the assistant, submitting a property inquiry, requesting a showing,
-    requesting a callback, or providing your phone number for follow-up, you agree to these
+    By using SIDNI or submitting the public property inquiry form, you agree to these
     Terms and Conditions.
   </p>
 
+  <p>
+    If you do not agree to these Terms and Conditions, do not use SIDNI or submit the
+    public property inquiry form.
+  </p>
+</section>
+
+<section>
   <h2>Service Description</h2>
 
   <p>
-    SIDNI helps a solo real estate listing agent respond to inbound property inquiries.
+    SIDNI by Steven Joseph Sabell is a real estate listing inquiry assistant for inbound
+    property inquiries. SIDNI helps consumers submit property questions, showing requests,
+    callback requests, and related contact details to the listing agent for follow-up.
   </p>
-
-  <p>SIDNI may:</p>
-
-  <ul>
-    <li>Answer approved factual questions about a listed property</li>
-    <li>Collect your contact information</li>
-    <li>Collect showing-request details</li>
-    <li>Collect callback-request details</li>
-    <li>Submit your request to the listing agent</li>
-    <li>Queue transactional SMS confirmations</li>
-    <li>Notify the listing agent about your inquiry</li>
-  </ul>
 
   <p>
-    SIDNI does not confirm showing appointments. A showing request is not confirmed until the
-    listing agent follows up with the final showing time.
+    SIDNI may help collect information such as your name, mobile phone number, email
+    address, property of interest, request type, and request details.
   </p>
 
+  <p>
+    SIDNI does not confirm showing appointments. Final showing confirmation must come
+    from the listing agent.
+  </p>
+
+  <p>
+    SIDNI does not provide legal, financial, mortgage, lending, appraisal, insurance,
+    tax, or real estate brokerage advice.
+  </p>
+</section>
+
+<section>
+  <h2>Property Inquiry Form</h2>
+
+  <p>
+    Consumers may submit a property inquiry, showing request, or callback request through
+    the public SIDNI property inquiry form.
+  </p>
+
+  <p>
+    The public property inquiry form is available here:
+    <a href="../sms-consent/">Property Inquiry Form and SMS Opt-In</a>.
+  </p>
+
+  <p>
+    By submitting the form, you represent that the information you provide is accurate
+    and that you are submitting the request for a legitimate property-related purpose.
+  </p>
+</section>
+
+<section>
   <h2>Transactional SMS Terms</h2>
 
   <p>
-    By contacting SIDNI about a listed property and voluntarily providing your phone number,
-    you agree to receive transactional SMS messages related to your inbound property inquiry.
-  </p>
-
-  <p>SMS messages may include:</p>
-
-  <ul>
-    <li>Showing request confirmations</li>
-    <li>Callback request confirmations</li>
-    <li>Property inquiry follow-up</li>
-    <li>Customer-care messages related to your request</li>
-    <li>Notices that a showing request is pending agent confirmation</li>
-  </ul>
-
-  <p>
-    SIDNI SMS messages are transactional and related to your inbound property inquiry. SIDNI
-    does not send cold outreach, purchased-list messaging, or marketing blasts.
+    You agree to receive transactional SMS messages from SIDNI by Steven Joseph Sabell
+    only when you submit the public SIDNI property inquiry form, provide your mobile
+    phone number, and actively select the SMS consent checkbox.
   </p>
 
   <p>
-    Message frequency varies based on your requests and interactions. Message and data rates
-    may apply.
+    The SMS consent checkbox is separate from the rest of the form and is not checked
+    by default. Users must actively select the checkbox before submitting their mobile
+    phone number for SMS follow-up.
+  </p>
+
+  <div class="notice">
+    <p>
+      The public SIDNI property inquiry form and SMS opt-in flow is available here:
+      <a href="../sms-consent/">Property Inquiry Form and SMS Opt-In</a>.
+    </p>
+  </div>
+
+  <p>
+    SMS messages are transactional and may relate to your submitted property inquiry,
+    showing request, callback request, customer-care response, or related follow-up.
   </p>
 
   <p>
-    You may opt out at any time by replying <strong>STOP</strong>. After you reply STOP, you may
-    receive a final confirmation message confirming that you have been unsubscribed.
+    Message frequency varies based on your property inquiry, showing request, callback
+    request, and related follow-up.
   </p>
 
   <p>
-    You may request help at any time by replying <strong>HELP</strong> or contacting
+    Message and data rates may apply.
+  </p>
+
+  <p>
+    Consent to receive SMS messages is not a condition of purchasing any property,
+    product, or service.
+  </p>
+
+  <p>
+    You may opt out of SMS messages at any time by replying STOP.
+  </p>
+
+  <p>
+    You may request help at any time by replying HELP or contacting
     <a href="mailto:stevensabell@gmail.com">stevensabell@gmail.com</a>.
   </p>
+</section>
+
+<section>
+  <h2>No Text-to-Join or Keyword-Based Opt-In</h2>
 
   <p>
-    Carriers are not responsible for delayed or undelivered messages.
-  </p>
-
-  <h2>Consent to Receive SMS Messages</h2>
-
-  <p>
-    You consent to receive SMS messages from SIDNI when you contact the listing assistant about
-    a property and voluntarily provide your phone number while requesting property information,
-    a showing request, or a callback from the listing agent.
+    SIDNI does not use text-to-join or keyword-based SMS opt-in for this campaign.
+    Users do not opt in by texting START, SUBSCRIBE, or another keyword.
   </p>
 
   <p>
-    Your consent is not a condition of purchasing any property, product, or service.
+    The only SMS opt-in method for this campaign is the public SIDNI property inquiry
+    form with the unchecked SMS consent checkbox.
+  </p>
+</section>
+
+<section>
+  <h2>Mobile Number Privacy</h2>
+
+  <p>
+    SIDNI does not sell, rent, or share phone numbers or SMS consent with third parties
+    or affiliates for marketing or promotional purposes.
   </p>
 
   <p>
-    For more information about how users opt in to receive SMS messages from SIDNI, view the
-    <a href="../sms-consent/">SMS Consent and Opt-In Flow</a>.
-  </p>
-
-  <h2>No Sale or Marketing Sharing of Phone Numbers or SMS Consent</h2>
-
-  <p>
-    SIDNI does not sell, rent, or share your phone number or SMS consent with third parties or
-    affiliates for marketing or promotional purposes.
+    Mobile information, including phone numbers and SMS opt-in consent, will not be
+    shared with third parties or affiliates for marketing or promotional purposes.
   </p>
 
   <p>
-    Mobile information, including phone numbers and SMS opt-in consent, will not be shared with
-    third parties or affiliates for marketing or promotional purposes.
+    Mobile phone numbers may be used only for transactional communications related to
+    the user's submitted property inquiry, showing request, callback request,
+    customer-care request, or related follow-up.
   </p>
+</section>
 
-  <h2>Service Boundaries</h2>
+<section>
+  <h2>Message Types</h2>
 
   <p>
-    SIDNI is intended to collect, inform, route, and submit property-related requests.
+    Users who opt in may receive transactional SMS messages such as:
+  </p>
+
+  <ul>
+    <li>Confirmation that a property inquiry was received.</li>
+    <li>Confirmation that a showing request was submitted.</li>
+    <li>Confirmation that a callback request was submitted.</li>
+    <li>Follow-up related to a specific listed-property inquiry.</li>
+    <li>Reminder that a showing request is pending listing-agent confirmation.</li>
+    <li>Customer-care responses related to the user's request.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Showing Requests Are Not Confirmed Appointments</h2>
+
+  <p>
+    Submitting a showing request through SIDNI does not create a confirmed appointment.
   </p>
 
   <p>
-    SIDNI does not provide legal, financial, lending, school, safety, demographic, protected-class,
-    neighborhood, offer, or negotiation advice. SIDNI may decline to answer those questions and
-    may offer to connect you with the listing agent or another appropriate professional.
+    Showing requests are sent to the listing agent for review and follow-up. Final
+    showing confirmation, scheduling, availability, access instructions, and any changes
+    must come from the listing agent.
+  </p>
+</section>
+
+<section>
+  <h2>Fair Housing and Restricted Topics</h2>
+
+  <p>
+    SIDNI is designed to assist with property-specific inquiries and request intake.
+    SIDNI does not provide guidance or recommendations based on protected classes,
+    neighborhood demographics, school demographics, crime or safety characterizations,
+    religious communities, ethnic composition, familial status, disability status,
+    or other fair-housing-sensitive topics.
   </p>
 
+  <p>
+    Users should consult qualified professionals and official public sources for
+    information outside the scope of property inquiry intake.
+  </p>
+</section>
+
+<section>
+  <h2>No Legal, Financial, or Professional Advice</h2>
+
+  <p>
+    SIDNI does not provide legal, financial, mortgage, lending, appraisal, insurance,
+    tax, or professional real estate advice.
+  </p>
+
+  <p>
+    Information provided through SIDNI is for general property inquiry intake and
+    routing purposes only. Users should consult qualified professionals for advice
+    related to legal, financial, lending, tax, insurance, inspection, appraisal, or
+    real estate transaction matters.
+  </p>
+</section>
+
+<section>
   <h2>User Responsibilities</h2>
 
   <p>
-    You agree to provide accurate information when submitting a request through SIDNI.
-  </p>
-
-  <p>You agree not to use SIDNI to:</p>
-
-  <ul>
-    <li>Submit false, misleading, abusive, or unlawful information</li>
-    <li>Interfere with the service</li>
-    <li>Attempt to access systems or information you are not authorized to access</li>
-    <li>Use the service for spam, harassment, or improper purposes</li>
-  </ul>
-
-  <h2>No Guarantee of Availability</h2>
-
-  <p>
-    SIDNI is a temporary MVP service. The service may be modified, paused, or discontinued at
-    any time. SIDNI does not guarantee uninterrupted availability or error-free operation.
-  </p>
-
-  <h2>Property Information</h2>
-
-  <p>
-    SIDNI may provide approved factual listing information based on available listing details.
-    Property information may change and should be verified with the listing agent or appropriate
-    source before relying on it.
-  </p>
-
-  <h2>Showing Requests</h2>
-
-  <p>
-    SIDNI may collect and submit showing requests to the listing agent.
+    You agree not to misuse SIDNI or submit false, misleading, abusive, unlawful,
+    harassing, or unrelated information.
   </p>
 
   <p>
-    Submitting a showing request through SIDNI does not confirm the showing. The showing is not
-    confirmed until the listing agent follows up with the final time.
+    You agree not to use SIDNI to interfere with the service, attempt unauthorized
+    access, send spam, impersonate another person, or submit requests unrelated to
+    legitimate property inquiries.
   </p>
+</section>
 
-  <h2>Callback Requests</h2>
+<section>
+  <h2>Availability and Accuracy</h2>
 
   <p>
-    SIDNI may collect and submit callback requests to the listing agent. The timing and method
-    of follow-up may vary based on agent availability.
+    SIDNI may not always be available, error-free, or uninterrupted.
   </p>
-
-  <h2>Privacy</h2>
 
   <p>
-    Your use of SIDNI is also governed by the SIDNI Privacy Policy, which explains how information
-    is collected, used, and protected.
+    Property information, availability, showing times, and other real estate details
+    may change. Users should verify important information with the listing agent or
+    other appropriate source before making decisions.
+  </p>
+</section>
+
+<section>
+  <h2>Third-Party Services</h2>
+
+  <p>
+    SIDNI may rely on third-party service providers for website hosting, messaging,
+    communications, logging, analytics, or related technical operations.
   </p>
 
+  <p>
+    Use of those services may be subject to additional third-party terms and policies.
+  </p>
+</section>
+
+<section>
+  <h2>Privacy Policy</h2>
+
+  <p>
+    Your use of SIDNI is also governed by the SIDNI Privacy Policy.
+  </p>
+
+  <p>
+    View the Privacy Policy here:
+    <a href="../privacy/">Privacy Policy</a>.
+  </p>
+</section>
+
+<section>
   <h2>Changes to These Terms</h2>
 
   <p>
-    SIDNI may update these Terms and Conditions from time to time. Updates will be posted on this
-    page with a new "Last Updated" date.
+    These Terms and Conditions may be updated from time to time. Updates will be posted
+    on this page with a revised last updated date.
   </p>
 
+  <p>
+    Continued use of SIDNI after updates are posted means you accept the updated Terms
+    and Conditions.
+  </p>
+</section>
+
+<section>
   <h2>Contact</h2>
 
   <p>
-    For questions about these Terms and Conditions, contact:
+    For questions about these Terms and Conditions, SMS communications, or SIDNI, contact:
   </p>
 
   <p>
-    <strong>Business Name:</strong> SIDNI<br />
-    <strong>Email:</strong> <a href="mailto:stevensabell@gmail.com">stevensabell@gmail.com</a>
+    <a href="mailto:stevensabell@gmail.com">stevensabell@gmail.com</a>
+  </p>
+</section>
+
+<section>
+  <h2>Related Pages</h2>
+
+  <p>
+    <a href="../sms-consent/">Property Inquiry Form and SMS Opt-In</a>
   </p>
 
-  <p><a href="../">Back to Home</a></p>
+  <p>
+    <a href="../privacy/">Privacy Policy</a>
+  </p>
+
+  <p>
+    <a href="../">Back to Home</a>
+  </p>
+</section>
+```
+
+  </main>
+
+  <footer>
+    <p>
+      Last Updated: June 24, 2026
+    </p>
+  </footer>
 </body>
 </html>
