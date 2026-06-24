@@ -1,227 +1,498 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>SIDNI SMS Consent and Opt-In Flow</title>
+  <title>SIDNI Property Inquiry Form and SMS Opt-In</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SIDNI property inquiry form and SMS opt-in flow for transactional real estate listing inquiry messages.">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --border: #d1d5db;
+      --accent: #1d4ed8;
+      --accent-dark: #1e40af;
+      --notice-bg: #eff6ff;
+      --notice-border: #2563eb;
+      --warning-bg: #fff7ed;
+      --warning-border: #f97316;
+    }
+
+```
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 0 20px 48px;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-top: 0;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+ul {
+  margin-top: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.notice {
+  background: var(--notice-bg);
+  border-left: 5px solid var(--notice-border);
+  padding: 16px;
+  border-radius: 8px;
+  margin: 18px 0;
+}
+
+.warning {
+  background: var(--warning-bg);
+  border-left: 5px solid var(--warning-border);
+  padding: 16px;
+  border-radius: 8px;
+  margin: 18px 0;
+}
+
+form {
+  margin-top: 18px;
+}
+
+.form-row {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  max-width: 680px;
+  padding: 10px 12px;
+  font: inherit;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 860px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #f9fafb;
+}
+
+.checkbox-row input[type="checkbox"] {
+  width: auto;
+  margin-top: 5px;
+  flex: 0 0 auto;
+}
+
+.checkbox-row label {
+  font-weight: 400;
+  margin: 0;
+}
+
+button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-dark);
+}
+
+.success-message {
+  display: none;
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px solid #16a34a;
+  border-radius: 8px;
+  background: #f0fdf4;
+  color: #14532d;
+  font-weight: 700;
+}
+
+footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+```
+
+  </style>
 </head>
+
 <body>
+  <header>
+    <div class="container">
+      <h1>SIDNI Property Inquiry Form and SMS Opt-In</h1>
+      <p class="muted">
+        Public property inquiry intake and SMS consent flow for SIDNI by Steven Joseph Sabell.
+      </p>
+
+```
+  <nav aria-label="Site navigation">
+    <a href="../">Home</a>
+    <a href="../privacy/">Privacy Policy</a>
+    <a href="../terms/">Terms and Conditions</a>
+  </nav>
+</div>
+```
+
+  </header>
+
   <main>
-    <h1>SIDNI SMS Consent and Opt-In Flow</h1>
+    <section>
+      <h2>Service Description</h2>
 
-    <p><strong>Last Updated:</strong> 2026-05-20</p>
+```
+  <p>
+    SIDNI by Steven Joseph Sabell is a real estate listing inquiry assistant for inbound
+    property inquiries. SIDNI helps consumers submit property questions, showing requests,
+    callback requests, and related contact details to the listing agent for follow-up.
+  </p>
 
+  <p>
+    SIDNI sends transactional SMS messages only to users who submit the public property
+    inquiry form on this page and actively opt in to SMS follow-up.
+  </p>
+
+  <p>
+    SIDNI does not confirm showing appointments. Final showing confirmation must come
+    from the listing agent.
+  </p>
+
+  <p>
+    SIDNI does not send cold outreach, purchased-list messaging, unrelated marketing
+    blasts, third-party promotional messages, or loan/financing offers.
+  </p>
+</section>
+
+<section>
+  <h2>How Users Opt In</h2>
+
+  <p>
+    Users opt in to receive transactional SMS messages from SIDNI by Steven Joseph Sabell
+    by submitting the public property inquiry form on this page and actively selecting
+    the SMS consent checkbox.
+  </p>
+
+  <p>
+    The SMS consent checkbox is separate from the rest of the form and is not checked
+    by default. Users must actively select the checkbox before submitting their mobile
+    phone number for SMS follow-up.
+  </p>
+
+  <div class="notice">
     <p>
-      SIDNI is an AI-powered real estate listing inquiry assistant for inbound property inquiries.
-      SIDNI helps collect property questions, showing requests, callback requests, and related
-      contact details, then routes them to the listing agent for follow-up.
+      This campaign uses one SMS opt-in method only: the public property inquiry form
+      on this page with an unchecked SMS consent checkbox.
     </p>
+  </div>
+</section>
 
-    <p>
-      SIDNI does not confirm showing appointments. Final showing confirmation must come from
-      the listing agent.
-    </p>
+<section>
+  <h2>Property Inquiry Form and SMS Consent</h2>
 
-    <h2>How Users Opt In</h2>
+  <p>
+    The form below is the public SIDNI property inquiry intake and SMS opt-in flow.
+    The SMS consent language appears at the point where the user's mobile phone number
+    is collected.
+  </p>
 
-    <p>
-      Users opt in to receive SMS messages from SIDNI by submitting a property inquiry, showing
-      request, or callback request and voluntarily providing their mobile phone number.
-    </p>
+  <form id="sidni-property-inquiry-form">
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" placeholder="Jane Consumer" required>
+    </div>
 
-    <p>
-      Before submitting their request, users are shown an SMS consent disclosure explaining that
-      messages are transactional, message frequency varies, message and data rates may apply,
-      users can reply STOP to opt out, and users can reply HELP for help.
-    </p>
+    <div class="form-row">
+      <label for="phone">Mobile Phone Number</label>
+      <input id="phone" name="phone" type="tel" placeholder="555-555-5555" required>
+    </div>
 
-    <h2>Public Example of the SMS Opt-In Form</h2>
+    <div class="form-row">
+      <label for="email">Email Address</label>
+      <input id="email" name="email" type="email" placeholder="jane@example.com">
+    </div>
 
-    <p>
-      The example below shows the type of property inquiry form or assistant intake flow
-      a consumer sees before submitting a property inquiry, showing request, or callback request.
-    </p>
+    <div class="form-row">
+      <label for="property">Property of Interest</label>
+      <input id="property" name="property" type="text" placeholder="1234 Aspen Ridge Drive" required>
+    </div>
 
-    <form>
-      <p>
-        <label for="name">Name</label><br>
-        <input id="name" name="name" type="text" placeholder="Jane Consumer">
-      </p>
+    <div class="form-row">
+      <label for="request_type">Request Type</label>
+      <select id="request_type" name="request_type" required>
+        <option value="">Select a request type</option>
+        <option value="property_inquiry">Property inquiry</option>
+        <option value="showing_request">Showing request</option>
+        <option value="callback_request">Callback request</option>
+      </select>
+    </div>
 
-      <p>
-        <label for="phone">Mobile Phone Number</label><br>
-        <input id="phone" name="phone" type="tel" placeholder="555-555-5555">
-      </p>
+    <div class="form-row">
+      <label for="message">Message or Request Details</label>
+      <textarea id="message" name="message" rows="5" placeholder="I would like more information about this property." required></textarea>
+    </div>
 
-      <p>
-        <label for="email">Email Address</label><br>
-        <input id="email" name="email" type="email" placeholder="jane@example.com">
-      </p>
+    <div class="form-row checkbox-row">
+      <input id="sms_consent" name="sms_consent" type="checkbox" required>
+      <label for="sms_consent">
+        I agree to receive transactional SMS messages from SIDNI by Steven Joseph Sabell
+        related to my property inquiry, showing request, callback request, or related
+        follow-up. Message frequency varies. Message and data rates may apply. Reply
+        STOP to opt out. Reply HELP for help. Consent is not a condition of purchasing
+        any property, product, or service. View our
+        <a href="../privacy/">Privacy Policy</a> and
+        <a href="../terms/">Terms and Conditions</a>.
+      </label>
+    </div>
 
-      <p>
-        <label for="property">Property of Interest</label><br>
-        <input id="property" name="property" type="text" placeholder="1234 Aspen Ridge Drive">
-      </p>
+    <button type="submit">Submit Property Request</button>
 
-      <p>
-        <label for="request">Request Type</label><br>
-        <select id="request" name="request">
-          <option>Property inquiry</option>
-          <option>Showing request</option>
-          <option>Callback request</option>
-        </select>
-      </p>
+    <div id="success-message" class="success-message" role="status">
+      Thank you. Your property request has been received for review. SMS follow-up will
+      only be sent if SMS consent was selected.
+    </div>
+  </form>
 
-      <p>
-        <label for="message">Message or Request Details</label><br>
-        <textarea id="message" name="message" rows="4" placeholder="I would like more information about this property."></textarea>
-      </p>
+  <p class="muted" style="margin-top: 16px;">
+    The SMS consent checkbox is unchecked by default and must be actively selected by
+    the user before submitting the form.
+  </p>
+</section>
 
-      <p>
-        <label>
-          <input type="checkbox" name="sms_consent">
-          I agree to receive transactional SMS messages from SIDNI related to my property inquiry,
-          showing request, callback request, or related follow-up. Message frequency varies.
-          Message and data rates may apply. Reply STOP to opt out. Reply HELP for help.
-          Consent is not a condition of purchasing any property, product, or service.
-          View our <a href="../privacy/">Privacy Policy</a> and
-          <a href="../terms/">Terms and Conditions</a>.
-        </label>
-      </p>
+<section>
+  <h2>Types of SMS Messages</h2>
 
-      <p>
-        <button type="button">Submit Property Request Example</button>
-      </p>
-    </form>
+  <p>
+    Users who opt in may receive transactional SMS messages related to their submitted
+    property request, such as:
+  </p>
 
-    <p>
-      This example form is provided for opt-in review purposes. In production, users must actively
-      select the SMS consent checkbox before submitting their phone number for SMS follow-up.
-    </p>
+  <ul>
+    <li>Confirmation that a property inquiry was received.</li>
+    <li>Confirmation that a showing request was submitted.</li>
+    <li>Confirmation that a callback request was submitted.</li>
+    <li>Follow-up related to a specific listed-property inquiry.</li>
+    <li>Reminder that a showing request is pending listing-agent confirmation.</li>
+    <li>Customer-care responses related to the user's request.</li>
+  </ul>
+</section>
 
-    <h2>Example Consent Disclosure</h2>
+<section>
+  <h2>Example SMS Messages</h2>
 
-    <p>
-      The following disclosure is shown to users before they submit a property inquiry, showing
-      request, or callback request:
-    </p>
+  <p>
+    SIDNI by Steven Joseph Sabell: Thanks for asking about [Property Address]. We
+    received your property inquiry and will follow up with the listing information
+    you requested. Reply STOP to opt out or HELP for help.
+  </p>
 
-    <blockquote>
-      By submitting this form or contacting SIDNI about a listed property, you agree to receive
-      transactional SMS messages from SIDNI related to your property inquiry, showing request,
-      callback request, or related follow-up. Message frequency varies based on your request.
-      Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is
-      not a condition of purchasing any property, product, or service. View our Privacy Policy
-      and Terms and Conditions.
-    </blockquote>
+  <p>
+    SIDNI by Steven Joseph Sabell: We received your showing request for [Property Address]
+    on [Requested Date/Time]. This is not a confirmed appointment. The listing agent will
+    follow up to confirm availability. Reply STOP to opt out or HELP for help.
+  </p>
 
-    <h2>Example Opt-In Form Flow</h2>
+  <p>
+    SIDNI by Steven Joseph Sabell: We received your callback request about [Property Address].
+    The listing agent will contact you at the number provided. Reply STOP to opt out or
+    HELP for help.
+  </p>
+</section>
 
-    <p>
-      A user may submit a request through a form or assistant flow containing fields such as:
-    </p>
+<section>
+  <h2>Message Frequency</h2>
 
-    <ul>
-      <li>Name</li>
-      <li>Mobile phone number</li>
-      <li>Email address, if provided</li>
-      <li>Property of interest</li>
-      <li>Property question, showing request, or callback request details</li>
-      <li>Requested showing time or callback preference, if applicable</li>
-    </ul>
+  <p>
+    Message frequency varies based on the user's property inquiry, showing request,
+    callback request, and related follow-up.
+  </p>
+</section>
 
-    <p>
-      The user provides their information voluntarily to request property-related follow-up from
-      the listing agent.
-    </p>
+<section>
+  <h2>Message and Data Rates</h2>
 
-    <h2>Types of SMS Messages</h2>
+  <p>
+    Message and data rates may apply.
+  </p>
+</section>
 
-    <p>SIDNI may send transactional SMS messages such as:</p>
+<section>
+  <h2>Opt Out</h2>
 
-    <ul>
-      <li>Confirmation that a property inquiry was received</li>
-      <li>Confirmation that a showing request was submitted</li>
-      <li>Confirmation that a callback request was submitted</li>
-      <li>Follow-up related to a specific listed-property inquiry</li>
-      <li>Reminder that a showing request is pending listing-agent confirmation</li>
-      <li>Customer-care responses related to the user's request</li>
-    </ul>
+  <p>
+    Users may opt out of SMS messages at any time by replying STOP.
+  </p>
+</section>
 
-    <p>
-      SIDNI does not send cold outreach, purchased-list messaging, mass marketing, unrelated
-      promotional blasts, or third-party promotional messages.
-    </p>
+<section>
+  <h2>Help</h2>
 
-    <h2>Example SMS Messages</h2>
+  <p>
+    Users may request help at any time by replying HELP or contacting
+    <a href="mailto:stevensabell@gmail.com">stevensabell@gmail.com</a>.
+  </p>
+</section>
 
-    <p>
-      SIDNI: Thanks for asking about [Property Address]. We received your property inquiry and
-      will follow up with the listing information you requested. Reply STOP to opt out or HELP
-      for help.
-    </p>
+<section>
+  <h2>Mobile Number Privacy</h2>
 
-    <p>
-      SIDNI: We received your showing request for [Property Address] on [Requested Date/Time].
-      This is not a confirmed appointment. The listing agent will follow up to confirm
-      availability. Reply STOP to opt out.
-    </p>
+  <p>
+    SIDNI does not sell, rent, or share phone numbers or SMS consent with third parties
+    or affiliates for marketing or promotional purposes.
+  </p>
 
-    <p>
-      SIDNI: We received your callback request about [Property Address]. The listing agent will
-      contact you at the number provided. Reply STOP to opt out or HELP for help.
-    </p>
+  <p>
+    Mobile information, including phone numbers and SMS opt-in consent, will not be shared
+    with third parties or affiliates for marketing or promotional purposes.
+  </p>
+</section>
 
-    <h2>Message Frequency</h2>
+<section>
+  <h2>No Text-to-Join Opt-In</h2>
 
-    <p>
-      Message frequency varies based on the user's property inquiry, showing request, callback
-      request, and related follow-up.
-    </p>
+  <p>
+    SIDNI does not use text-to-join or keyword-based SMS opt-in for this campaign.
+    Users do not opt in by texting START, SUBSCRIBE, or another keyword.
+  </p>
 
-    <h2>Message and Data Rates</h2>
+  <p>
+    The only SMS opt-in method for this campaign is the public property inquiry form
+    on this page with the unchecked SMS consent checkbox.
+  </p>
+</section>
 
-    <p>
-      Message and data rates may apply.
-    </p>
+<section>
+  <h2>Legal Pages</h2>
 
-    <h2>Opt Out</h2>
+  <p>
+    <a href="../privacy/">Privacy Policy</a>
+  </p>
 
-    <p>
-      Users may opt out of SMS messages at any time by replying STOP.
-    </p>
+  <p>
+    <a href="../terms/">Terms and Conditions</a>
+  </p>
 
-    <h2>Help</h2>
+  <p>
+    <a href="../">Back to Home</a>
+  </p>
+</section>
+```
 
-    <p>
-      Users may request help at any time by replying HELP or contacting stevensabell@gmail.com.
-    </p>
-
-    <h2>Mobile Number Privacy</h2>
-
-    <p>
-      SIDNI does not sell, rent, or share phone numbers or SMS consent with third parties or
-      affiliates for marketing or promotional purposes.
-    </p>
-
-    <p>
-      Mobile information, including phone numbers and SMS opt-in consent, will not be shared
-      with third parties or affiliates for marketing or promotional purposes.
-    </p>
-
-    <h2>Legal Pages</h2>
-
-    <p>
-      <a href="../privacy/">Privacy Policy</a>
-    </p>
-
-    <p>
-      <a href="../terms/">Terms and Conditions</a>
-    </p>
-
-    <p>
-      <a href="../">Back to Home</a>
-    </p>
   </main>
+
+  <footer>
+    <p>
+      Last Updated: June 24, 2026
+    </p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("sidni-property-inquiry-form");
+    const successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      successMessage.style.display = "block";
+      successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  </script>
+
 </body>
 </html>
