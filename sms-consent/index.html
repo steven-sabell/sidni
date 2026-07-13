@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>SIDNI Property Inquiry Form and SMS Opt-In</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SIDNI property inquiry form and SMS opt-in flow for transactional real estate listing inquiry messages.">
+  <meta name="description" content="SIDNI property inquiry form and optional SMS opt-in flow for transactional real estate listing inquiry messages.">
   <style>
     :root {
       --bg: #f8fafc;
@@ -19,6 +19,9 @@
       --notice-border: #2563eb;
       --warning-bg: #fff7ed;
       --warning-border: #f97316;
+      --success-bg: #f0fdf4;
+      --success-border: #16a34a;
+      --success-text: #14532d;
     }
 
 ```
@@ -190,10 +193,10 @@ button:hover {
   display: none;
   margin-top: 16px;
   padding: 14px;
-  border: 1px solid #16a34a;
+  border: 1px solid var(--success-border);
   border-radius: 8px;
-  background: #f0fdf4;
-  color: #14532d;
+  background: var(--success-bg);
+  color: var(--success-text);
   font-weight: 700;
 }
 
@@ -212,9 +215,9 @@ footer {
 <body>
   <header>
     <div class="container">
-      <h1>SIDNI Property Inquiry Form and SMS Opt-In</h1>
+      <h1>SIDNI Property Inquiry Form and Optional SMS Opt-In</h1>
       <p class="muted">
-        Public property inquiry intake and SMS consent flow for SIDNI by Steven Joseph Sabell.
+        Public property inquiry intake and optional SMS consent flow for SIDNI by Steven Joseph Sabell.
       </p>
 
 ```
@@ -241,7 +244,12 @@ footer {
 
   <p>
     SIDNI sends transactional SMS messages only to users who submit the public property
-    inquiry form on this page and actively opt in to SMS follow-up.
+    inquiry form on this page and separately choose to opt in to SMS follow-up.
+  </p>
+
+  <p>
+    SMS consent is optional and is not required to submit a property inquiry, showing
+    request, or callback request.
   </p>
 
   <p>
@@ -259,32 +267,32 @@ footer {
   <h2>How Users Opt In</h2>
 
   <p>
-    Users opt in to receive transactional SMS messages from SIDNI by Steven Joseph Sabell
-    by submitting the public property inquiry form on this page and actively selecting
-    the SMS consent checkbox.
+    Users may opt in to receive transactional SMS messages from SIDNI by Steven Joseph
+    Sabell by submitting the public property inquiry form on this page and separately
+    selecting the optional SMS consent checkbox.
   </p>
 
   <p>
     The SMS consent checkbox is separate from the rest of the form and is not checked
-    by default. Users must actively select the checkbox before submitting their mobile
-    phone number for SMS follow-up.
+    by default. Users may submit the property inquiry form without selecting SMS consent.
+    If the SMS consent checkbox is not selected, SIDNI will not send SMS messages.
   </p>
 
   <div class="notice">
     <p>
       This campaign uses one SMS opt-in method only: the public property inquiry form
-      on this page with an unchecked SMS consent checkbox.
+      on this page with an optional, unchecked SMS consent checkbox.
     </p>
   </div>
 </section>
 
 <section>
-  <h2>Property Inquiry Form and SMS Consent</h2>
+  <h2>Property Inquiry Form and Optional SMS Consent</h2>
 
   <p>
-    The form below is the public SIDNI property inquiry intake and SMS opt-in flow.
-    The SMS consent language appears at the point where the user's mobile phone number
-    is collected.
+    The form below is the public SIDNI property inquiry intake and optional SMS opt-in
+    flow. The SMS consent language appears at the point where contact information is
+    collected.
   </p>
 
   <form id="sidni-property-inquiry-form">
@@ -324,7 +332,7 @@ footer {
     </div>
 
     <div class="form-row checkbox-row">
-      <input id="sms_consent" name="sms_consent" type="checkbox" required>
+      <input id="sms_consent" name="sms_consent" type="checkbox">
       <label for="sms_consent">
         I agree to receive transactional SMS messages from SIDNI by Steven Joseph Sabell
         related to my property inquiry, showing request, callback request, or related
@@ -339,14 +347,15 @@ footer {
     <button type="submit">Submit Property Request</button>
 
     <div id="success-message" class="success-message" role="status">
-      Thank you. Your property request has been received for review. SMS follow-up will
-      only be sent if SMS consent was selected.
+      Thank you. Your property request has been received. If you did not select SMS
+      consent, SIDNI will not send SMS messages.
     </div>
   </form>
 
   <p class="muted" style="margin-top: 16px;">
-    The SMS consent checkbox is unchecked by default and must be actively selected by
-    the user before submitting the form.
+    The SMS consent checkbox is unchecked by default. SMS consent is optional and is not
+    required to submit the property inquiry form. If the checkbox is not selected, SIDNI
+    will not send SMS messages.
   </p>
 </section>
 
@@ -448,7 +457,7 @@ footer {
 
   <p>
     The only SMS opt-in method for this campaign is the public property inquiry form
-    on this page with the unchecked SMS consent checkbox.
+    on this page with the optional, unchecked SMS consent checkbox.
   </p>
 </section>
 
